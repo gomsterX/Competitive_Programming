@@ -2,11 +2,9 @@ import os
 
 os.system("firefox codechef.com/problems/school &")
 print("opening firefox....")
-print("Problem ID: ", end = '')
-problem_id = input()
 
-print("Problem name: ", end = '')
-problem_name = input()
+problem_id = input("Problem ID: ")
+problem_name = input("Problem name: ")
 
 os.system("touch {}.py".format(problem_id))
 
