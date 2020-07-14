@@ -1,6 +1,6 @@
 #Problem ID: arr1_find_pair_sum
 #Problem Name: Find pair with given sum in an array
-#Complexity: O(N) "more specifically O(m):m=n/2"
+#Complexity: O(Nlog(N))
 
 def find_pair(l, s):
     l = sorted(l)
