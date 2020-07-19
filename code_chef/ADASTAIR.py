@@ -4,11 +4,14 @@
 for _ in range(int(input())):
     n, k = map(int, input().split())
     l = list(map(int, input().split()))
-    c = 0
-    for i in range(1, n):
-        m = l[i]-l[i-1]
-        if m > k:
-            c+= m//k
-    print(c)
-
-
+    pos = 0
+    steps = 0
+    for i in l:
+        if i - pos <= k:
+            pos = i
+        else:
+            steps += ((i-pos)//k)
+            if (i-pos)%k == 0:
+                steps -= 1
+            pos = i
+    print(steps)
